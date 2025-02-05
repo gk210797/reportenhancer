@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes rotateFade {
+  0% {
+    transform: rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(1.3);
+    opacity: 1;
+  }
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  font-size: 80px; /* Increase font size */
+  font-weight: bold;
+}
+
+.rotate {
+  animation: rotateFade 1s ease-in-out forwards;
+}
+
+.hidden {
+  display: none;
+}
