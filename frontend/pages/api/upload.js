@@ -38,7 +38,7 @@ const extractMetadata = (extractedText) => {
 
   let dateIndex = extractedText.indexOf("Generated On  :");
   if (dateIndex !== -1) {
-    metadata["Generated Date"] = extractedText[dateIndex + 1] || "";
+    metadata["Generated on"] = extractedText[dateIndex + 1] || "";
   }
 
   let departmentIndex = extractedText.indexOf("Department Name:");
